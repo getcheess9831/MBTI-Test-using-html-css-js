@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MBTI Test</title>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <h1>MBTI Personality Test</h1>
+    </header>
+    <p id="welcome-text">
+      Welcome to the MBTI Personality Test! The test will indicate your
+      personality type based on your responses.
+    </p>
+    <!-- Test Section -->
+    <section>
+      <h3>Test Questions</h3>
+      <form>
+        <!-- Questions will be dynamically inserted here -->
+        <div id="questions-container">
+          <div class="question-card">
+            <div class="question-content">
+              <p>1. After a social gathering, you feel?</p>
+              <input type="radio" name="q1" value="E" /> A. Energized and
+              happy<br />
+              <input type="radio" name="q1" value="I" /> B. Drained and need
+              alone time.
+            </div>
+            <img src="images/socialGathering.webp" class="question-image" />
+          </div>
+          <!------------------------------------------------------------------->
+          <div class="question-card">
+            <div class="question-content">
+              <p>2. You prefer to spend your time:</p>
+              <input type="radio" name="q2" value="E" /> A. Going out and
+              meeting people.<br />
+              <input type="radio" name="q2" value="I" /> B. Staying home.<br />
+            </div>
+            <img src="images/lonely.webp" class="question-image" />
+          </div>
+          <!------------------------------------------------------------------->
+          <div class="question-card">
+            <div class="question-content">
+              <p>3. You tend to:</p>
+              <input type="radio" name="q3" value="E" /> A. Speak before
+              thinking.<br />
+              <input type="radio" name="q3" value="I" /> B. Think before
+              speaking.<br />
+            </div>
+            <img src="images/thinking.webp" class="question-image" />
+          </div>
+          <!------------------------------------------------------------------->
+          <div class="question-card">
+            <div class="question-content">
+              <p>4. You trust more:</p>
+              <input type="radio" name="q4" value="S" /> A. Concrete facts.<br />
+              <input type="radio" name="q4" value="N" /> B. Gut instincts.<br />
+            </div>
+            <img src="images/trust.gif" class="question-image" />
+          </div>
+          <!------------------------------------------------------------------->
+          <div class="question-card">
+            <div class="question-content">
+              <p>5. You focus more on:</p>
+              <input type="radio" name="q5" value="S" /> A. Details and
+              specifics.<br />
+              <input type="radio" name="q5" value="N" /> B. Future
+              possibilities.<br />
+            </div>
+            <img src="images/details.jpg" class="question-image" />
+          </div>
+          <!------------------------------------------------------------------->
+          <div class="question-card">
+            <div class="question-content">
+              <p>6. You prefer:</p>
+              <input type="radio" name="q6" value="S" /> A. Follow step by step
+              instructions.<br />
+              <input type="radio" name="q6" value="N" /> B. Figuring it out as
+              you go.<br />
+            </div>
+            <img src="images/walking.gif" class="question-image" />
+          </div>
+          <!------------------------------------------------------------------->
+          <div class="question-card">
+            <div class="question-content">
+              <p>7. When making decisions, you prioritize:</p>
+              <input type="radio" name="q7" value="T" /> A. Logic and
+              analysis.<br />
+              <input type="radio" name="q7" value="F" /> B. Other's feelings.<br />
+            </div>
+            <img src="images/twochoices.jpg" class="question-image" />
+          </div>
+          <!------------------------------------------------------------------->
+          <div class="question-card">
+            <div class="question-content">
+              <p>8. When a friend vents to you, you tend to:</p>
+              <input type="radio" name="q8" value="T" /> A. Listen and offer
+              practical advice.<br />
+              <input type="radio" name="q8" value="F" /> B. Listen and offer
+              emotional support.<br />
+            </div>
+            <img src="images/talking.jpg" class="question-image" />
+          </div>
+          <!------------------------------------------------------------------->
+          <div class="question-card">
+            <div class="question-content">
+              <p>
+                9. Which of the two choices you believe to be more important?
+              </p>
+              <input type="radio" name="q9" value="T" /> A. Justice and
+              fairness.<br />
+              <input type="radio" name="q9" value="F" /> B. Harmony and
+              compassion.<br />
+            </div>
+            <img src="images/choices.jpg" class="question-image" />
+          </div>
+          <!------------------------------------------------------------------->
+          <div class="question-card">
+            <div class="question-content">
+              <p>10. You prefer:</p>
+              <input type="radio" name="q10" value="J" /> A. Planning ahead.<br />
+              <input type="radio" name="q10" value="P" /> B. Deciding last
+              minute.<br />
+            </div>
+            <img src="images/plan.jpg" class="question-image" />
+          </div>
+          <!------------------------------------------------------------------->
+          <div class="question-card">
+            <div class="question-content">
+              <p>11. Your room is usually:</p>
+              <input type="radio" name="q11" value="J" /> A. Organized and
+              tidy.<br />
+              <input type="radio" name="q11" value="P" /> B. A bit messy.<br />
+            </div>
+            <img src="images/messyroom.webp" class="question-image" />
+          </div>
+          <!------------------------------------------------------------------->
+          <div class="question-card">
+            <div class="question-content">
+              <p>12. Deadlines to you are:</p>
+              <input type="radio" name="q12" value="J" /> A. Must be strictly
+              followed.<br />
+              <input type="radio" name="q12" value="P" /> B. Flexible and can be
+              adjusted.<br />
+            </div>
+            <img src="images/deadline.jpg" class="question-image" />
+          </div>
+        </div>
+      </form>
+    </section>
+    <div id="result-container" style="display: none">
+      <h2>Your MBTI Type is:</h2>
+      <p id="result-text"></p>
+      <img id="result-img" class="result-image" />
+      <button type="button" onclick="goBack()">Take the test again</button>
+    </div>
+    <button
+      id="submit-btn"
+      type="button"
+      onclick="getResults()"
+      style="margin-top: 100px"
+    >
+      Submit
+    </button>
+    <footer style="margin-bottom: 100px; text-align: center">
+      <p>&copy; 2023 Personality Test. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
