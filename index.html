@@ -2,9 +2,12 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="style.css" />
+    <!-- Link to the external CSS file. -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- adapting to different screen sizes such as mobile devices. -->
     <title>MBTI Test</title>
+    <!-- Title of the webpage. -->
   </head>
   <body>
     <!-- Header Section -->
@@ -12,6 +15,7 @@
       <h1>MBTI Personality Test</h1>
     </header>
     <p id="welcome-text">
+      <!-- Welcome message that shows on the top of the page. -->
       Welcome to the MBTI Personality Test! The test will indicate your
       personality type based on your responses.
     </p>
@@ -21,15 +25,20 @@
       <form>
         <!-- Questions will be dynamically inserted here -->
         <div id="questions-container">
+          <!-- outer container for each question card, with the container you can find this specific part/element with JS.-->
           <div class="question-card">
+            <!-- To bracket up the question content and using CSS to style it as each of the questions are more clearly separated.-->
             <div class="question-content">
+              <!-- The contents for each question is stored in this class.-->
               <p>1. After a social gathering, you feel?</p>
               <input type="radio" name="q1" value="E" /> A. Energized and
               happy<br />
+              <!--Using input type radio as a way to select one option from a set of choices. Giving it a name and value so we can gather all the answers and display result for the user.-->
               <input type="radio" name="q1" value="I" /> B. Drained and need
               alone time.
             </div>
             <img src="images/socialGathering.webp" class="question-image" />
+            <!-- We store the image for each question in this element， excluing it from question-content to display image and question content side by side -->
           </div>
           <!------------------------------------------------------------------->
           <div class="question-card">
@@ -152,6 +161,7 @@
       </form>
     </section>
     <div id="result-container" style="display: none">
+      <!--Set up the result display page, display: none for it to hide until js is triggered.-->
       <h2>Your MBTI Type is:</h2>
       <p id="result-text"></p>
       <img id="result-img" class="result-image" />

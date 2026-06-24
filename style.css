@@ -1,28 +1,28 @@
-h1 {
-  color: red;
-  font-size: 32px;
-}
 body {
   background-color: white;
   font-family: Arial, sans-serif;
   max-width: 700px;
   margin: 0 auto;
   padding: 20px;
+  /* Overall styling for the body of the page. Setting the background color white, and font Arial, sans-serif as backup if Arial is not available. Max width of 700px even if the user has a large screen it won't extend beyond this width. margin 0 auto to set the content in the center with 0 px margin top and bottom. */
 }
 
 h1 {
   color: black;
   text-align: center;
 }
+/* Styling for the main heading of the page. Setting the color to black and aligning the text to center. */
 
 h3 {
   color: #ff6584;
 }
+/* Styling for the subheading of the page. Setting the color to a shade of pink (#ff6584). */
 
 p {
   color: #333;
   font-size: 16px;
 }
+/* Styling for the paragraph text. Setting the color to a dark gray (#333) and font size to 16px. */
 
 .question-card {
   display: flex;
@@ -33,10 +33,12 @@ p {
   margin-bottom: 50px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+/* Styling for the question card container. Using flexbox to arrange the content horizontally, aligning items to the right. Setting background color to white, border radius to 5px for rounded corners, padding of 10px, margin bottom of 50px for spacing between cards, and a subtle box shadow for depth. */
 
 .question-content {
   flex: 1;
 }
+/* Styling for the question content within the question card. Setting flex to 1 to allow it to take up available space within the flex container. */
 
 .question-image {
   width: 300px;
@@ -45,9 +47,13 @@ p {
   border-radius: 15px;
   margin-left: 50px;
 }
+/* Styling for the question image within the question card. Setting width and height to 300px, object-fit to cover for proper image scaling, border radius to 15px for rounded corners, and margin left of 50px for spacing. */
+
 input[type="radio"] {
   margin-bottom: 100px;
 }
+/* Styling for the radio buttons. Setting margin bottom to 100px for spacing. */
+
 button {
   background-color: #6c63ff;
   color: white;
@@ -59,13 +65,25 @@ button {
   display: block;
   margin: 30px auto;
 }
+/* Styling for the submit button. Setting background color to a shade of purple (#6c63ff), text color to white, removing border, adding padding of 14px top/bottom and 40px left/right, font size of 18px, border radius of 25px for rounded corners, cursor to pointer for hover effect, display block to center the button, and margin of 30px auto for spacing. */
 
 button:hover {
   background-color: #574fd6;
 }
+/* Styling for the submit button on hover. Changing the background color to a darker shade of purple (#574fd6) when the user hovers over the button. */
 .result-image {
   display: block;
   margin: 0 auto;
   width: 150px;
   height: 200px;
+}
+@media (max-width: 600px) {
+  .question-card {
+    flex-direction: column;
+  }
+  .question-image {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
 }
